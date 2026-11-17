@@ -1,2 +1,97 @@
-<h1>Welcome to NEXORA AI</h1>
-<p>Create Beyond Limits.</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA AI | Create Beyond Limits</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#080b12;color:#fff;font-family:Arial,sans-serif}
+header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #20283a}
+.logo{font-size:25px;font-weight:800;color:#54f5c1}
+nav a{color:#ddd;text-decoration:none;margin-left:20px}
+.hero{text-align:center;padding:100px 20px 75px}
+.tag{color:#54f5c1;letter-spacing:4px;font-size:12px}
+h1{font-size:clamp(40px,8vw,75px);margin:25px 0}
+h1 span{color:#54f5c1}
+.hero p{color:#aab2c3;line-height:1.8;max-width:600px;margin:0 auto 30px}
+button{background:#54f5c1;color:#07110f;border:0;padding:14px 23px;border-radius:8px;font-weight:bold;cursor:pointer}
+section{padding:65px 7%}
+h2{text-align:center;font-size:32px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card,.studio{background:#111827;border:1px solid #26334a;padding:25px;border-radius:15px}
+.card h3{color:#54f5c1;margin-bottom:12px}
+.card p{color:#aab2c3;line-height:1.7}
+.studio{max-width:700px;margin:auto}
+label{display:block;margin-bottom:12px}
+select,textarea{width:100%;background:#080b12;color:white;border:1px solid #34415a;padding:14px;border-radius:8px;margin-bottom:15px;font-size:15px}
+textarea{height:120px;resize:vertical}
+#result{white-space:pre-wrap;color:#54f5c1;line-height:1.7;margin-top:20px}
+footer{text-align:center;padding:30px;color:#8993a5;border-top:1px solid #20283a}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">NEXORA AI</div>
+<nav><a href="#tools">Tools</a><a href="#studio">Studio</a></nav>
+</header>
+
+<div class="hero">
+<div class="tag">WELCOME TO THE FUTURE</div>
+<h1>Create Beyond <span>Limits.</span></h1>
+<p>Your creative journey starts here. Explore powerful tools for content, branding and business ideas.</p>
+<button onclick="document.getElementById('studio').scrollIntoView({behavior:'smooth'})">Explore Studio</button>
+</div>
+
+<section id="tools">
+<h2>Explore Our Tools</h2>
+<div class="grid">
+<div class="card"><h3>✦ Caption Creator</h3><p>Create engaging social media caption ideas for your content.</p></div>
+<div class="card"><h3>✧ Brand Assistant</h3><p>Discover brand names, slogans and creative business ideas.</p></div>
+<div class="card"><h3>◈ Product Writer</h3><p>Turn product information into attractive descriptions.</p></div>
+</div>
+</section>
+
+<section id="studio">
+<h2>Your Creative Studio</h2>
+<div class="studio">
+<label for="tool">Choose a creative tool</label>
+<select id="tool">
+<option value="caption">Caption Creator</option>
+<option value="brand">Brand Assistant</option>
+<option value="product">Product Writer</option>
+</select>
+<label for="prompt">Describe what you want to create</label>
+<textarea id="prompt" placeholder="Enter your idea here..."></textarea>
+<button onclick="generate()">Generate Idea</button>
+<div id="result"></div>
+</div>
+</section>
+
+<footer>© 2026 NEXORA AI · Create Beyond Limits</footer>
+
+<script>
+function generate(){
+const prompt=document.getElementById("prompt").value.trim();
+const tool=document.getElementById("tool").value;
+const result=document.getElementById("result");
+
+if(!prompt){
+result.textContent="Please enter your idea first.";
+return;
+}
+
+let heading="";
+if(tool==="caption") heading="CAPTION IDEA";
+if(tool==="brand") heading="BRAND IDEA";
+if(tool==="product") heading="PRODUCT DESCRIPTION IDEA";
+
+result.textContent=heading+"\n\nYour creative brief:\n"+prompt+
+"\n\nThis is a preview. Your real AI engine will be connected through a secure backend.";
+}
+</script>
+</body>
+</html>
+
