@@ -13,17 +13,10 @@ html{scroll-behavior:smooth}
 body{background:#080b12;color:#fff;font-family:Arial,sans-serif}
 
 header{
-padding:20px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #20283a;
-position:sticky;
-top:0;
-z-index:10;
-background:#080b12
+padding:20px 7%;display:flex;justify-content:space-between;
+align-items:center;border-bottom:1px solid #20283a;
+position:sticky;top:0;z-index:10;background:#080b12
 }
-
 .logo{font-size:25px;font-weight:800;color:#54f5c1}
 nav a{color:#ddd;text-decoration:none;margin-left:16px;font-size:14px}
 nav a:hover{color:#54f5c1}
@@ -35,67 +28,42 @@ h1 span{color:#54f5c1}
 .hero p{color:#aab2c3;line-height:1.8;max-width:600px;margin:0 auto 30px}
 
 button{
-background:#54f5c1;
-color:#07110f;
-border:0;
-padding:14px 23px;
-border-radius:8px;
-font-weight:bold;
-cursor:pointer
+background:#54f5c1;color:#07110f;border:0;
+padding:14px 23px;border-radius:8px;font-weight:bold;cursor:pointer
 }
 button:hover{opacity:.85}
+button:disabled{opacity:.6;cursor:wait}
 
 section{padding:65px 7%}
 h2{text-align:center;font-size:32px;margin-bottom:30px}
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px
 }
-
 .card,.studio,.price-card{
-background:#111827;
-border:1px solid #26334a;
-padding:25px;
-border-radius:15px
+background:#111827;border:1px solid #26334a;padding:25px;border-radius:15px
 }
-
 .card h3{color:#54f5c1;margin-bottom:12px}
 .card p{color:#aab2c3;line-height:1.7}
 .studio{max-width:700px;margin:auto}
 
 label{display:block;margin-bottom:12px}
 select,textarea{
-width:100%;
-background:#080b12;
-color:white;
-border:1px solid #34415a;
-padding:14px;
-border-radius:8px;
-margin-bottom:15px;
-font-size:15px
+width:100%;background:#080b12;color:white;
+border:1px solid #34415a;padding:14px;border-radius:8px;
+margin-bottom:15px;font-size:15px
 }
 textarea{height:120px;resize:vertical}
 
 #result{
-white-space:pre-wrap;
-color:#54f5c1;
-line-height:1.7;
-margin-top:20px;
-overflow-wrap:anywhere
+white-space:pre-wrap;color:#54f5c1;line-height:1.7;
+margin-top:20px;overflow-wrap:anywhere
 }
-
-/* PRICING */
 
 .pricing-intro{
-text-align:center;
-color:#aab2c3;
-line-height:1.8;
-max-width:600px;
-margin:-10px auto 35px
+text-align:center;color:#aab2c3;line-height:1.8;
+max-width:600px;margin:-10px auto 35px
 }
-
 .price-card{text-align:center}
 .price-card h3{color:#54f5c1;font-size:23px;margin-bottom:15px}
 .price{font-size:35px;font-weight:bold;margin:20px 0}
@@ -103,31 +71,20 @@ margin:-10px auto 35px
 .price-card p{color:#aab2c3;line-height:1.8;margin-bottom:12px}
 .price-card ul{list-style:none;text-align:left;margin:25px 0}
 .price-card li{
-padding:11px 0;
-border-bottom:1px solid #26334a;
-color:#ddd;
-font-size:14px
+padding:11px 0;border-bottom:1px solid #26334a;
+color:#ddd;font-size:14px
 }
-
 .pro-card{border:1px solid #54f5c1}
 .pro-label{
-display:inline-block;
-color:#54f5c1;
-border:1px solid #54f5c1;
-padding:7px 13px;
-border-radius:20px;
-font-size:12px;
-margin-bottom:15px
+display:inline-block;color:#54f5c1;border:1px solid #54f5c1;
+padding:7px 13px;border-radius:20px;font-size:12px;margin-bottom:15px
 }
 .price-card button{width:100%;margin-top:10px}
 .coming-soon{background:#26334a;color:#fff;cursor:not-allowed}
 
 footer{
-text-align:center;
-padding:30px;
-color:#8993a5;
-border-top:1px solid #20283a;
-line-height:1.8
+text-align:center;padding:30px;color:#8993a5;
+border-top:1px solid #20283a;line-height:1.8
 }
 
 @media(max-width:600px){
@@ -152,8 +109,6 @@ h2{font-size:27px}
 </nav>
 </header>
 
-<!-- HERO -->
-
 <div class="hero">
 <div class="tag">WELCOME TO THE FUTURE</div>
 <h1>Create Beyond <span>Limits.</span></h1>
@@ -163,35 +118,26 @@ Explore Studio
 </button>
 </div>
 
-<!-- TOOLS -->
-
 <section id="tools">
 <h2>Explore Our Tools</h2>
 <div class="grid">
-
 <div class="card">
 <h3>✦ Caption Creator</h3>
 <p>Create engaging social media caption ideas for your content.</p>
 </div>
-
 <div class="card">
 <h3>✧ Brand Assistant</h3>
 <p>Discover brand names, slogans and creative business ideas.</p>
 </div>
-
 <div class="card">
 <h3>◈ Product Writer</h3>
 <p>Turn product information into attractive descriptions.</p>
 </div>
-
 </div>
 </section>
 
-<!-- STUDIO -->
-
 <section id="studio">
 <h2>Your Creative Studio</h2>
-
 <div class="studio">
 
 <label for="tool">Choose a creative tool</label>
@@ -204,28 +150,23 @@ Explore Studio
 <label for="prompt">Describe what you want to create</label>
 <textarea id="prompt" placeholder="Enter your idea here..."></textarea>
 
-<button onclick="generate()">Generate Idea</button>
+<button id="generateButton" onclick="generate()">Generate Idea</button>
 
-<div id="result"></div>
+<div id="result" aria-live="polite"></div>
 </div>
 </section>
 
-<!-- PRICING -->
-
 <section id="pricing">
 <h2>Choose Your Plan</h2>
-
 <p class="pricing-intro">
 Start creating with NEXORA AI. Choose the plan that matches your creative journey.
 </p>
 
 <div class="grid">
-
 <div class="price-card">
 <h3>FREE PLAN</h3>
 <div class="price">₦0 <small>/ forever</small></div>
 <p>Get started with NEXORA AI.</p>
-
 <ul>
 <li>✓ Access to creative tools</li>
 <li>✓ Caption ideas</li>
@@ -233,7 +174,6 @@ Start creating with NEXORA AI. Choose the plan that matches your creative journe
 <li>✓ Product description ideas</li>
 <li>✓ Creative studio access</li>
 </ul>
-
 <button onclick="document.getElementById('studio').scrollIntoView({behavior:'smooth'})">
 Start Creating
 </button>
@@ -244,7 +184,6 @@ Start Creating
 <h3>NEXORA PRO</h3>
 <div class="price">₦5,000 <small>/ month</small></div>
 <p>For creators who want more possibilities.</p>
-
 <ul>
 <li>✓ Higher AI generation limits</li>
 <li>✓ Premium captions</li>
@@ -253,56 +192,74 @@ Start Creating
 <li>✓ Save creative projects</li>
 <li>✓ Priority generation</li>
 </ul>
-
-<button class="coming-soon" disabled>
-PRO — COMING SOON
-</button>
+<button class="coming-soon" disabled>PRO — COMING SOON</button>
 </div>
-
 </div>
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 <p>© 2026 NEXORA AI. All rights reserved.</p>
 <p>Create Beyond Limits.</p>
 </footer>
 
-<!-- JAVASCRIPT -->
-
 <script>
-function generate(){
+async function generate(){
 
 const prompt = document.getElementById("prompt").value.trim();
 const tool = document.getElementById("tool").value;
 const result = document.getElementById("result");
+const button = document.getElementById("generateButton");
 
 if(!prompt){
 result.textContent = "Please enter your idea first.";
 return;
 }
 
-let heading = "";
-
-if(tool === "caption"){
-heading = "CAPTION IDEA";
+if(prompt.length > 1200){
+result.textContent = "Please keep your idea under 1200 characters.";
+return;
 }
 
-if(tool === "brand"){
-heading = "BRAND IDEA";
+button.disabled = true;
+button.textContent = "Generating...";
+result.textContent = "NEXORA AI is creating your result. Please wait...";
+
+try{
+
+const response = await fetch("/api/generate",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+prompt:prompt,
+tool:tool
+})
+});
+
+const data = await response.json();
+
+if(!response.ok){
+throw new Error(data.error || "AI generation failed. Please try again.");
 }
 
-if(tool === "product"){
-heading = "PRODUCT DESCRIPTION IDEA";
+if(!data.result){
+throw new Error("No AI response received.");
 }
 
-result.textContent =
-heading +
-"\n\nYour creative brief:\n" +
-prompt +
-"\n\nThis is currently a preview. The real AI engine will be connected through a secure backend.";
+result.textContent = data.result;
 
+}catch(error){
+
+console.error("NEXORA AI error:",error);
+result.textContent = "Sorry, NEXORA AI could not generate your result. " + error.message;
+
+}finally{
+
+button.disabled = false;
+button.textContent = "Generate Idea";
+
+}
 }
 </script>
 
